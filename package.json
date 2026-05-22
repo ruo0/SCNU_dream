@@ -1,0 +1,15 @@
+{
+  "name": "huashi-campus",
+  "version": "1.0.0",
+  "description": "华师校园 - 天外天校园服务平台",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0"
+  }
+}
