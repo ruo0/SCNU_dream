@@ -3,6 +3,7 @@
 # 🏫 华师校园 · SCNU Campus
 
 **华南师范大学一站式校园服务移动平台**
+（仅供娱乐）
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
@@ -27,7 +28,7 @@
 ### 📚 自习室
 > 按校区浏览教学楼 · 教室实时空闲状态 · 座位数 / 空调 / 电源信息 · 一键预约
 
-### 🤖 AI 助手 — 小天老师
+### 🤖 AI 助手 
 > 接入硅基流动大模型（Qwen3-8B）· 智能回答校园问题 · 无 API Key 自动降级 Mock
 
 ### 💬 校园论坛
