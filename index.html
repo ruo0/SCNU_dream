@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="color-scheme" content="light dark">
   <title>华师校园 · SCNU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -58,45 +62,192 @@
     }
 
     [data-theme="dark"] {
-      --blue: #5B9FE6;
-      --blue-dark: #4A8FD6;
-      --blue-light: #1E2A3A;
-      --orange: #FFB84D;
-      --green: #5DE87A;
-      --red: #FF5C52;
-      --gray-bg: #0D1117;
-      --gray-text: #8B949E;
-      --bg-primary: #161B22;
-      --bg-secondary: #0D1117;
-      --bg-card: #1C2128;
-      --text-primary: #E6EDF3;
-      --text-secondary: #B0BAC5;
-      --text-tertiary: #8B949E;
-      --border-color: #30363D;
-      --border-light: #21262D;
-      --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-      --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
-      --input-bg: #21262D;
-      --input-border: #30363D;
-      --nav-bg: #161B22;
-      --modal-bg: #1C2128;
-      --chat-user-bg: #388BFD;
-      --chat-user-text: #fff;
-      --chat-bot-bg: #21262D;
-      --chat-bot-text: #E6EDF3;
-      --tag-green-bg: #122117;
-      --tag-green-text: #5DE87A;
-      --tag-blue-bg: #122133;
-      --tag-blue-text: #5B9FE6;
-      --tag-orange-bg: #2A1E0F;
-      --tag-orange-text: #FFB84D;
-      --watermark-opacity: 0.015;
-      --watermark-color: #E6EDF3;
+      --blue: #c3d9f3;
+      --blue-dark: #a8c4e8;
+      --blue-light: #141414;
+      --orange: #d4a017;
+      --green: #5fa657;
+      --red: #c0392b;
+      --gray-bg: #000000;
+      --gray-text: #999999;
+      --bg-primary: #000000;
+      --bg-secondary: #000000;
+      --bg-card: #141414;
+      --text-primary: #ffffff;
+      --text-secondary: #cccccc;
+      --text-tertiary: #999999;
+      --border-color: #262626;
+      --border-light: #1f1f1f;
+      --shadow-card: none;
+      --shadow-sm: none;
+      --shadow-xs: none;
+      --input-bg: transparent;
+      --input-border: #3a3a3a;
+      --nav-bg: #000000;
+      --modal-bg: #0d0d0d;
+      --chat-user-bg: #1f1f1f;
+      --chat-user-text: #ffffff;
+      --chat-bot-bg: #141414;
+      --chat-bot-text: #cccccc;
+      --tag-green-bg: #141414;
+      --tag-green-text: #5fa657;
+      --tag-blue-bg: #141414;
+      --tag-blue-text: #c3d9f3;
+      --tag-orange-bg: #141414;
+      --tag-orange-text: #d4a017;
+      --watermark-opacity: 0.02;
+      --watermark-color: #262626;
+      --card-radius: 0px;
+    }
+
+    /* Bugatti dark mode: transparent buttons, no shadows, hairline borders, wide tracking */
+    [data-theme="dark"] .login-btn,
+    [data-theme="dark"] .btn-primary,
+    [data-theme="dark"] .forum-comment-input button,
+    [data-theme="dark"] .forum-fab {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 9999px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-family: "Saira Condensed", sans-serif;
+      font-weight: 400;
+      box-shadow: none;
+    }
+
+    [data-theme="dark"] .login-btn:active,
+    [data-theme="dark"] .btn-primary:active {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    [data-theme="dark"] .quick-entry,
+    [data-theme="dark"] .exam-card,
+    [data-theme="dark"] .setting-item,
+    [data-theme="dark"] .forum-card,
+    [data-theme="dark"] .gpa-card,
+    [data-theme="dark"] .room-item {
+      box-shadow: none;
+      border: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .course-card {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: none;
+    }
+
+    [data-theme="dark"] .toggle.on {
+      background: #fff;
+    }
+
+    [data-theme="dark"] .toggle.on::after {
+      background: #000;
+    }
+
+    [data-theme="dark"] .chat-input-row input:focus,
+    [data-theme="dark"] .forum-comment-input input:focus,
+    [data-theme="dark"] .input-group input:focus {
+      border-color: #fff;
+    }
+
+    [data-theme="dark"] .status-bar,
+    [data-theme="dark"] .home-header,
+    [data-theme="dark"] .detail-header,
+    [data-theme="dark"] .ai-header,
+    [data-theme="dark"] .settings-header,
+    [data-theme="dark"] .login-header,
+    [data-theme="dark"] .forum-header {
+      background: #000;
+      border-bottom: 1px solid #262626;
+    }
+
+    [data-theme="dark"] .detail-header,
+    [data-theme="dark"] .ai-header,
+    [data-theme="dark"] .settings-header,
+    [data-theme="dark"] .login-header,
+    [data-theme="dark"] .forum-header {
+      position: sticky;
+      top: 34px;
+      z-index: 99;
+    }
+
+    [data-theme="dark"] .course-badge {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    [data-theme="dark"] .exam-countdown {
+      background: transparent;
+      border: 1px solid var(--blue);
+      color: var(--blue);
+    }
+
+    [data-theme="dark"] .forum-card-cat {
+      background: transparent;
+      border: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .chat-quick span {
+      background: transparent;
+      border: 1px solid #262626;
+      color: #999;
+      letter-spacing: 1px;
+    }
+
+    [data-theme="dark"] .nav-ai {
+      background: transparent;
+      border: 1px solid #fff;
+      box-shadow: none;
+    }
+
+    [data-theme="dark"] .schedule-table th {
+      background: #141414;
+      color: #fff;
+      border-bottom: 1px solid #262626;
+    }
+
+    [data-theme="dark"] .schedule-table .sc {
+      background: #0d0d0d;
+      border: 1px solid #262626;
+    }
+
+    [data-theme="dark"] .qr-wrap canvas {
+      border-color: #262626;
+    }
+
+    /* Display font for English text: uppercase, wide tracking in dark mode */
+    [data-theme="dark"] .greeting,
+    [data-theme="dark"] .tab,
+    [data-theme="dark"] .forum-cat,
+    [data-theme="dark"] .nav-item span,
+    [data-theme="dark"] .modal-header .m-title,
+    [data-theme="dark"] .detail-header .title,
+    [data-theme="dark"] .ai-header .title,
+    [data-theme="dark"] .settings-header .title,
+    [data-theme="dark"] .login-header .title,
+    [data-theme="dark"] .forum-header .title,
+    [data-theme="dark"] .login-big-title,
+    [data-theme="dark"] .gpa-label,
+    [data-theme="dark"] .floor-title,
+    [data-theme="dark"] .forum-card-title,
+    [data-theme="dark"] .forum-detail-title,
+    [data-theme="dark"] .forum-comments-title,
+    [data-theme="dark"] .exam-name,
+    [data-theme="dark"] .room-name {
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    [data-theme="dark"] .quick-entry .label,
+    [data-theme="dark"] .quick-entry .label span {
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     body {
-      font-family: -apple-system, "SF Pro", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-family: "Saira Condensed", "PingFang SC", "Microsoft YaHei", sans-serif;
       background: var(--bg-secondary);
       color: var(--text-primary);
       max-width: 430px;
@@ -118,6 +269,8 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .status-bar .right {
@@ -148,11 +301,19 @@
       border-radius: 0 0 24px 24px;
     }
 
+    [data-theme="dark"] .home-header {
+      border-radius: 0;
+      border-bottom: 1px solid #262626;
+    }
+
     .greeting {
       color: #fff;
       font-size: 22px;
       font-weight: 700;
       padding: 12px 0 8px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     .course-card {
@@ -182,6 +343,8 @@
       font-size: 16px;
       font-weight: 600;
       margin-top: 6px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
     }
 
     .course-avatar {
@@ -202,6 +365,8 @@
       border-radius: 10px;
       font-size: 11px;
       margin-top: 4px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .quick-entries {
@@ -248,12 +413,18 @@
     .quick-entry .label {
       font-size: 13px;
       font-weight: 500;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .quick-entry .label span {
       display: block;
       font-size: 11px;
       color: var(--text-tertiary);
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+      text-transform: none;
     }
 
     .quick-entry .arrow {
@@ -278,6 +449,9 @@
       cursor: pointer;
       position: relative;
       transition: color 0.2s;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .tab.active {
@@ -305,6 +479,9 @@
       font-weight: 600;
       cursor: pointer;
       color: var(--text-primary);
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .campus-selector .arrow-down {
@@ -346,6 +523,7 @@
     .building-name {
       font-size: 12px;
       color: var(--text-secondary);
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
     }
 
     .tab-content {
@@ -372,12 +550,17 @@
       font-size: 48px;
       font-weight: 700;
       color: var(--blue);
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 3px;
     }
 
     .gpa-label {
       font-size: 13px;
       color: var(--text-tertiary);
       margin-top: 4px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .gpa-chart {
@@ -454,6 +637,8 @@
     .exam-card .exam-name {
       font-size: 14px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .exam-card .exam-info {
@@ -468,6 +653,8 @@
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .detail-header {
@@ -490,6 +677,9 @@
     .detail-header .title {
       font-size: 16px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .detail-header .cal-icon {
@@ -506,6 +696,9 @@
       font-weight: 600;
       margin-bottom: 10px;
       color: var(--text-secondary);
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .room-grid {
@@ -531,6 +724,8 @@
     .room-name {
       font-size: 13px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .room-status {
@@ -575,6 +770,9 @@
     .ai-header .title {
       font-size: 16px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .ai-header .clear-btn {
@@ -587,6 +785,8 @@
       color: #fff;
       padding: 4px 10px;
       border-radius: 8px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .chat-body {
@@ -688,6 +888,7 @@
       font-size: 18px;
       cursor: pointer;
       flex-shrink: 0;
+      font-family: "Saira Condensed", sans-serif;
     }
 
     .settings-header {
@@ -710,6 +911,9 @@
     .settings-header .title {
       font-size: 16px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .settings-list {
@@ -742,6 +946,8 @@
     .setting-item .label {
       flex: 1;
       font-size: 14px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .setting-item .value {
@@ -823,6 +1029,9 @@
     .login-header .title {
       font-size: 16px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .login-body {
@@ -836,6 +1045,9 @@
       text-align: center;
       margin-bottom: 30px;
       color: var(--text-primary);
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     .input-group {
@@ -924,6 +1136,9 @@
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
     }
 
     .login-btn:active {
@@ -973,6 +1188,9 @@
       color: var(--text-tertiary);
       font-size: 10px;
       transition: color 0.2s;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .nav-item.active {
@@ -1002,6 +1220,8 @@
       font-weight: 700;
       margin-top: -10px;
       box-shadow: 0 2px 8px rgba(74, 144, 217, 0.3);
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2px;
     }
 
     /* Modal */
@@ -1077,6 +1297,9 @@
     .modal-header .m-title {
       font-size: 16px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .modal-header .m-close {
@@ -1143,9 +1366,12 @@
 
     .schedule-table th {
       background: var(--blue);
-      color: #fff;
+      color: var(--on-primary, #fff);
       padding: 8px 4px;
       font-weight: 500;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .schedule-table td {
@@ -1306,6 +1532,8 @@
       border-radius: 4px;
       font-size: 11px;
       margin: 2px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .tag.green {
@@ -1330,6 +1558,9 @@
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .btn-primary {
@@ -1361,6 +1592,9 @@
     .forum-header .title {
       font-size: 16px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .forum-cats {
@@ -1384,6 +1618,9 @@
       position: relative;
       transition: color 0.2s;
       flex-shrink: 0;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .forum-cat.active {
@@ -1449,6 +1686,8 @@
     .forum-card-author {
       font-size: 13px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .forum-card-time {
@@ -1460,6 +1699,9 @@
       font-size: 11px;
       padding: 2px 8px;
       border-radius: 10px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .forum-card-cat.学习 {
@@ -1491,6 +1733,8 @@
       font-size: 15px;
       font-weight: 600;
       margin-bottom: 6px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .forum-card-content {
@@ -1535,6 +1779,7 @@
       align-items: center;
       justify-content: center;
       transition: transform 0.2s;
+      font-family: "Saira Condensed", sans-serif;
     }
 
     .forum-fab:active {
@@ -1549,6 +1794,8 @@
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 12px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
     }
 
     .forum-detail-content {
@@ -1588,6 +1835,9 @@
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 12px;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .forum-comment {
@@ -1616,6 +1866,8 @@
     .forum-comment-author {
       font-size: 12px;
       font-weight: 600;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1px;
     }
 
     .forum-comment-time {
@@ -1660,6 +1912,9 @@
       font-size: 13px;
       cursor: pointer;
       flex-shrink: 0;
+      font-family: "Saira Condensed", sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
   </style>
 </head>
